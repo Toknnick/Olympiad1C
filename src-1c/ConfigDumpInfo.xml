@@ -2,14 +2,15 @@
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.20">
 	<ConfigVersions>
 		<Metadata name="Configuration.Олимпиада2026" id="9a1afa2a-9190-4a3b-9218-92d73a2ddd40" configVersion="f56cfaed4508084780472a4ec16f970c00000000"/>
-		<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex" id="be0377a3-5220-4441-ad3c-5c24dba7a9b6" configVersion="dfbc05564eda584bbe6c33ad4d50ef4600000000">
+		<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex" id="be0377a3-5220-4441-ad3c-5c24dba7a9b6" configVersion="a4a7b8622bc2ed42a2ac82954d8a22d100000000">
 			<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Attribute.ИсходнаяКриптовалюта" id="134afcb7-7fa9-4f5e-8e5c-a09dce4c88de"/>
 			<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Attribute.ЦелеваяКриптовалюта" id="7b09d64c-000a-4f26-a1a3-5d648ee049ac"/>
 			<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Attribute.СуммаВИсходнойКриптовалюте" id="d049afff-81cc-43be-9e14-9347e28e62e6"/>
+			<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Attribute.СтрокаОтчет" id="d2b744fb-038b-4070-b0ed-131d2459010b"/>
 			<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Attribute.Документ" id="de5fc6ec-8d2a-47d3-afc7-c230860cebf0"/>
 		</Metadata>
-		<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Form.Форма" id="b072da33-76fd-4226-b379-26be5023542d" configVersion="3e826a8b7b780a479aab78d6e73efe5800000000"/>
-		<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Form.Форма.Form" id="b072da33-76fd-4226-b379-26be5023542d.0" configVersion="d4fe594e4260c34dbe5d77fe9ac5f03300000000"/>
+		<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Form.Форма" id="b072da33-76fd-4226-b379-26be5023542d" configVersion="3202c90afac6c74e9b0342a9ced9d2ba00000000"/>
+		<Metadata name="DataProcessor.КонвертацияВалютыЧерезDex.Form.Форма.Form" id="b072da33-76fd-4226-b379-26be5023542d.0" configVersion="c83cc744d1fcb040b3382cfe8e966eb900000000"/>
 		<Metadata name="Document.Криптообменники" id="e0ace24d-c57f-43f1-9072-1dfa62b75ba7" configVersion="610cc9230c151a4896a409b70c2e660300000000">
 			<Metadata name="Document.Криптообменники.Attribute.Источник" id="1cb39740-6f85-4021-ad39-4509090e009f"/>
 			<Metadata name="Document.Криптообменники.TabularSection.ВалютныеПары.Attribute.Курс" id="27c89398-7593-4292-8a7a-acbfc677b5e9"/>

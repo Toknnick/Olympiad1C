@@ -1,64 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="NavigationProcessing">ОбработкаПерехода</Event>
+		<Event name="ActivationProcessing">ОбработкаАктивизации</Event>
+	</Events>
 	<ChildItems>
-		<InputField name="Документ" id="28">
-			<DataPath>Объект.Документ</DataPath>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-			<ContextMenu name="ДокументКонтекстноеМеню" id="29"/>
-			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="30"/>
-			<Events>
-				<Event name="OnChange">ДокументПриИзменении</Event>
-			</Events>
-		</InputField>
-		<UsualGroup name="Криптовалюты" id="24">
-			<Enabled>false</Enabled>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Криптовалюты</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сначала необходимо выбрать документ</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Vertical</Group>
-			<ExtendedTooltip name="КриптовалютыРасширеннаяПодсказка" id="25"/>
-			<ChildItems>
-				<InputField name="ИсходнаяКриптовалюта" id="34">
-					<DataPath>Объект.ИсходнаяКриптовалюта</DataPath>
-					<ListChoiceMode>true</ListChoiceMode>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="ИсходнаяКриптовалютаКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ИсходнаяКриптовалютаРасширеннаяПодсказка" id="36"/>
-					<Events>
-						<Event name="OnChange">ИсходнаяКриптовалютаПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="СуммаВИсходнойКриптовалюте" id="31">
-					<DataPath>Объект.СуммаВИсходнойКриптовалюте</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="СуммаВИсходнойКриптовалютеКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="СуммаВИсходнойКриптовалютеРасширеннаяПодсказка" id="33"/>
-					<Events>
-						<Event name="OnChange">СуммаВИсходнойКриптовалютеПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ЦелеваяКриптовалюта" id="37">
-					<DataPath>Объект.ЦелеваяКриптовалюта</DataPath>
-					<ListChoiceMode>true</ListChoiceMode>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="ЦелеваяКриптовалютаКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="ЦелеваяКриптовалютаРасширеннаяПодсказка" id="39"/>
-					<Events>
-						<Event name="OnChange">ЦелеваяКриптовалютаПриИзменении</Event>
-					</Events>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
 		<Button name="РасчитатьКоманда" id="40">
 			<Type>UsualButton</Type>
 			<Visible>false</Visible>
@@ -66,6 +14,198 @@
 			<CommandName>Form.Command.РасчитатьКоманда</CommandName>
 			<ExtendedTooltip name="РасчитатьКомандаРасширеннаяПодсказка" id="41"/>
 		</Button>
+		<Pages name="Страницы" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Page name="СтраницаДанные" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДанныеРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="Документ" id="28">
+							<DataPath>Объект.Документ</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДокументКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnChange">ДокументПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="Криптовалюты" id="24">
+							<Enabled>false</Enabled>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Криптовалюты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сначала необходимо выбрать документ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="КриптовалютыРасширеннаяПодсказка" id="25"/>
+							<ChildItems>
+								<InputField name="ИсходнаяКриптовалюта" id="34">
+									<DataPath>Объект.ИсходнаяКриптовалюта</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ИсходнаяКриптовалютаКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ИсходнаяКриптовалютаРасширеннаяПодсказка" id="36"/>
+									<Events>
+										<Event name="OnChange">ИсходнаяКриптовалютаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СуммаВИсходнойКриптовалюте" id="31">
+									<DataPath>Объект.СуммаВИсходнойКриптовалюте</DataPath>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СуммаВИсходнойКриптовалютеКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="СуммаВИсходнойКриптовалютеРасширеннаяПодсказка" id="33"/>
+									<Events>
+										<Event name="OnChange">СуммаВИсходнойКриптовалютеПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЦелеваяКриптовалюта" id="37">
+									<DataPath>Объект.ЦелеваяКриптовалюта</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЦелеваяКриптовалютаКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ЦелеваяКриптовалютаРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="OnChange">ЦелеваяКриптовалютаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтчет" id="46">
+					<Enabled>false</Enabled>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница отчет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОтчетРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<LabelField name="СтрокаОтчет" id="79">
+							<DataPath>Объект.СтрокаОтчет</DataPath>
+							<Width>50</Width>
+							<Height>10</Height>
+							<ContextMenu name="СтрокаОтчетКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="СтрокаОтчетРасширеннаяПодсказка" id="81"/>
+						</LabelField>
+						<Table name="ТаблицаОтчет" id="51">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТаблицаОтчет</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаОтчетКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="ТаблицаОтчетКоманднаяПанель" id="53">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаОтчетРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="ТаблицаОтчетСтрокаПоиска" id="55">
+								<AdditionSource>
+									<Item>ТаблицаОтчет</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОтчетСтрокаПоискаКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ТаблицаОтчетСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаОтчетСостояниеПросмотра" id="58" DisplayImportance="VeryLow">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>ТаблицаОтчет</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОтчетСостояниеПросмотраКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="ТаблицаОтчетСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаОтчетУправлениеПоиском" id="61">
+								<AdditionSource>
+									<Item>ТаблицаОтчет</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОтчетУправлениеПоискомКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="ТаблицаОтчетУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаОтчетНомер" id="64">
+									<DataPath>ТаблицаОтчет.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаОтчетНомерКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ТаблицаОтчетНомерРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="ТаблицаОтчетПлатформаПротокол" id="67">
+									<DataPath>ТаблицаОтчет.ПлатформаПротокол</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаОтчетПлатформаПротоколКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ТаблицаОтчетПлатформаПротоколРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="ТаблицаОтчетКриптовалютаИсходная" id="70">
+									<DataPath>ТаблицаОтчет.КриптовалютаИсходная</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаОтчетКриптовалютаИсходнаяКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ТаблицаОтчетКриптовалютаИсходнаяРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<InputField name="ТаблицаОтчетКриптовалютаЦелевая" id="73">
+									<DataPath>ТаблицаОтчет.КриптовалютаЦелевая</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаОтчетКриптовалютаЦелеваяКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ТаблицаОтчетКриптовалютаЦелеваяРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="ТаблицаОтчетРезультатОбмена" id="76">
+									<DataPath>ТаблицаОтчет.РезультатОбмена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаОтчетРезультатОбменаКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="ТаблицаОтчетРезультатОбменаРасширеннаяПодсказка" id="78"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -143,6 +283,110 @@
 						<v8:NumberQualifiers>
 							<v8:Digits>10</v8:Digits>
 							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Платформа" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платформа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаОтчет" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица отчет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПлатформаПротокол" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платформа/протокол</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КриптовалютаИсходная" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Криптовалюта исходная</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КриптовалютаЦелевая" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Криптовалюта целевая</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РезультатОбмена" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат обмена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>32</v8:Digits>
+							<v8:FractionDigits>8</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
